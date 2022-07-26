@@ -1,0 +1,139 @@
+@media screen and (max-width: 767px) {
+  h2 {
+    margin-bottom: 16px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  h2 {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 32px;
+    padding-left: 32px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    margin-bottom: 344px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    margin-bottom: 106px;
+  }
+}
+
+.companyNameContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.companyNameContainer > svg {
+  width: 39px;
+  height: 31px;
+  fill: #28a745;
+}
+
+@media screen and (max-width: 767px) {
+  .companyNameContainer > svg {
+    margin-right: 6px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .companyNameContainer > svg {
+    margin-right: 10px;
+  }
+}
+
+.companyName {
+  display: inline-block;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  line-height: 42px;
+}
+
+@media screen and (max-width: 767px) {
+  .companyName {
+    font-size: 32px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .companyName {
+    font-size: 35px;
+  }
+}
+
+.green {
+  color: #28a745;
+}
+
+@media screen and (min-width: 768px) {
+  .green {
+    margin-right: 10px;
+  }
+}
+
+.white {
+  color: #fff;
+}
+
+.navList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 0;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 767px) {
+  .navList {
+    margin-bottom: 40px;
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .navList {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .navList :not(:last-child) {
+    margin-right: 12px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .navList :not(:last-child) {
+    margin-right: 20px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .navList :not(:last-child) {
+    margin-right: 40px;
+  }
+}
+
+.navList a {
+  color: #ffffff;
+  text-decoration: none;
+}

@@ -1,0 +1,141 @@
+.container {
+  width: 100%;
+  padding-top: 29px;
+  text-align: center;
+  background-image: url('../../images/showcase.jpg');
+  background-size: cover;
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    padding-bottom: 96px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    max-width: 768px;
+    padding-bottom: 410px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    padding-bottom: 282px;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1359px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media screen and (min-width: 1360px) {
+  .container {
+    max-width: 1360px;
+  }
+}
+
+.title {
+  display: inline-block;
+  width: 100%;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  line-height: 66px;
+  color: #e9e9e9;
+}
+
+@media screen and (max-width: 767px) {
+  .title {
+    max-width: 241px;
+    margin-bottom: 20px;
+    font-size: 52px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .title {
+    margin-bottom: 24px;
+    font-size: 55px;
+  }
+}
+
+.subtitle {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 37px;
+  color: #e9e9e9;
+}
+
+@media screen and (max-width: 767px) {
+  .subtitle {
+    margin-bottom: 24px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .subtitle {
+    margin-bottom: 32px;
+  }
+}
+
+.readMore {
+  width: 100%;
+  max-width: 165px;
+  padding-top: 10px;
+  padding-right: 29px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  background-color: #28a745;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  color: #fff;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 767px) {
+  .readMore {
+    padding-left: 41px;
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .readMore > svg {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .readMore {
+    display: inline-flex;
+    align-items: center;
+    padding-left: 29px;
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .readMore > svg {
+    width: 7px;
+    height: 11px;
+    margin-right: 5px;
+    fill: #fff;
+  }
+}

@@ -1,0 +1,344 @@
+.container {
+  padding-top: 40px;
+  text-align: center;
+  color: #333333;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1359px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media screen and (min-width: 1360px) {
+  .container {
+    max-width: 1360px;
+  }
+}
+
+.whoWeAre {
+  margin-bottom: 20px;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 767px) {
+  .whoWeAre {
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .whoWeAre {
+    font-size: 20px;
+    line-height: 33px;
+  }
+}
+
+.title {
+  margin-bottom: 20px;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 38px;
+  line-height: 48px;
+}
+
+.description {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 767px) {
+  .description {
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .description {
+    font-size: 17px;
+    line-height: 28px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .description {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+
+.cardList {
+  padding-right: 20px;
+  padding-bottom: 40px;
+  padding-left: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .cardList {
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .cardList {
+    column-gap: 18px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .cardList {
+    column-gap: 20px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .cardList :not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+.cardListImg {
+  width: 100%;
+  max-width: 420px;
+}
+
+.name {
+  margin-bottom: 12px;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 767px) {
+  .name {
+    font-size: 23px;
+    line-height: 29px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .name {
+    font-size: 25px;
+    line-height: 32px;
+  }
+}
+
+.position {
+  margin-bottom: 0;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 767px) {
+  .position {
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .position {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .contactContainer {
+    display: flex;
+    justify-content: flex-end;
+    background-image: url('../../images/contact.jpg');
+    background-size: 470px 354px;
+    background-position: -25% 0px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .contactContainer {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .contactImg {
+    width: 100%;
+    max-width: 100vw;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .contactImg {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+  .contactImg {
+    width: 100%;
+    max-width: 555px;
+    height: 100%;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .contactImg {
+    width: 100%;
+    max-width: 670px;
+    height: 100%;
+  }
+}
+
+.contactFormContainer {
+  padding: 40px 20px;
+  background-color: #f4f4f4;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .contactFormContainer {
+    width: 400px;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+  .contactFormContainer {
+    width: 445px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .contactFormContainer {
+    width: 690px;
+  }
+}
+
+.contactFormTitle {
+  width: 100%;
+  margin-bottom: 32px;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 38px;
+  line-height: 48px;
+}
+
+@media screen and (max-width: 767px) {
+  .contactFormTitle {
+    max-width: 147px;
+  }
+}
+
+.contactForm {
+  text-align: center;
+}
+
+.contactForm > input {
+  width: 100%;
+  height: 40px;
+}
+
+.input {
+  margin-bottom: 32px;
+}
+
+.inputSecond {
+  margin-bottom: 40px;
+}
+
+.input,
+.inputSecond {
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 8px;
+  border: none;
+  outline: none;
+}
+
+.input::placeholder,
+.inputSecond::placeholder {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  color: #808080;
+}
+
+@media screen and (max-width: 767px) {
+  .input::placeholder,
+  .inputSecond::placeholder {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .input::placeholder,
+  .inputSecond::placeholder {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .input::placeholder,
+  .inputSecond::placeholder {
+    line-height: 23px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .input::placeholder,
+  .inputSecond::placeholder {
+    line-height: 28px;
+  }
+}
+
+.submitButton {
+  padding: 10px 116px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background-color: #28a745;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  color: #fff;
+}
+
+@media screen and (max-width: 767px) {
+  .submitButton {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .submitButton {
+    font-size: 18px;
+    line-height: 25px;
+  }
+}

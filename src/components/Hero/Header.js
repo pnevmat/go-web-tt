@@ -1,17 +1,22 @@
 import React from 'react';
+import Logo from '../../images/icons/Logo';
+
+import styles from './Header.module.css';
 
 export default function Header() {
   return (
-    <>
+    <header className={styles.container}>
       <h2>
-        <svg use="./images/icons/logo.svg"></svg>
-        <div>
-          <span>Finance</span>
-          <span>Ledger</span>
+        <div className={styles.companyNameContainer}>
+          <Logo />
+          <div className={styles.companyName}>
+            <span className={styles.green}>Finance</span>
+            <span className={styles.white}>Ledger</span>
+          </div>
         </div>
       </h2>
       <nav>
-        <ul>
+        <ul className={styles.navList}>
           <li>
             <a href="#0">Home</a>
           </li>
@@ -29,6 +34,6 @@ export default function Header() {
           </li>
         </ul>
       </nav>
-    </>
+    </header>
   );
 }

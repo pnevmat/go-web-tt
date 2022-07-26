@@ -1,8 +1,8 @@
-import Hero from './components/Hero';
-import BestSolutions from './components/BestSolutions';
-import BusinessCases from './components/BusinessCases';
-import Team from './components/Team';
-import Footer from './components/Footer';
+import Hero from './components/Hero/Hero';
+import BestSolutions from './components/BestSolutions/BestSolutions';
+import BusinessCases from './components/BusinessCases/BusinessCases';
+import Team from './components/Team/Team';
+import Footer from './components/Footer/Footer';
 import './App.css';
 
 function App() {
