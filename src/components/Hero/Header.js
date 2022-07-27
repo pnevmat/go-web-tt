@@ -1,11 +1,29 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import Logo from '../../images/icons/Logo';
 
 import styles from './Header.module.css';
 
 export default function Header() {
+  const header = useRef(null);
+
+  window.onscroll = () => {
+    const scroll = window.scrollY;
+    const viewPortWidth = document.documentElement.clientWidth;
+
+    if (
+      (viewPortWidth > 767 && scroll > 70) ||
+      (viewPortWidth < 768 && scroll > 120)
+    ) {
+      header.current.classList.add(styles.headerFixed);
+    } else if (
+      (viewPortWidth > 767 && scroll < 70) ||
+      (viewPortWidth < 768 && scroll < 120)
+    ) {
+      header.current.classList.remove(styles.headerFixed);
+    }
+  };
   return (
-    <header className={styles.container}>
+    <header ref={header} className={styles.container}>
       <h2>
         <div className={styles.companyNameContainer}>
           <Logo />

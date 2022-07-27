@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import contactJpg from '../../images/contact.jpg';
 import contactJpg2x from '../../images/contact@2x.jpg';
 import contactWebp from '../../images/contact.webp';
@@ -7,10 +7,23 @@ import Facebook from '../../images/icons/Facebook';
 import Twitter from '../../images/icons/Twitter';
 import Youtube from '../../images/icons/Youtube';
 import Linkedin from '../../images/icons/Linkedin';
+import Worning from '../../images/icons/Worning';
+import validator from '../../utils/validator';
 
 import styles from './Team.module.css';
 
+const encode = data => {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&');
+};
+
 export default function Team() {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [nameValid, setNameValid] = useState(true);
+  const [emailValid, setEmailValid] = useState(true);
+
   const team = [
     {
       id: 1,
@@ -40,6 +53,35 @@ export default function Team() {
       position: 'Marketing Head',
     },
   ];
+
+  function handleChangeName(e) {
+    setName(e.target.value);
+  }
+
+  function handleChangeEmail(e) {
+    setEmail(e.target.value);
+  }
+
+  function handleSubmit(e) {
+    console.log('form submition started');
+    const { nameValidator, emailValidator } = validator;
+    nameValidator(name, setNameValid);
+    emailValidator(email, setEmailValid);
+
+    if (nameValid && emailValid && email !== '') {
+      console.log('form submited');
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: encode({ 'form-name': 'contact', name, email }),
+      })
+        .then(() => alert('Success!'))
+        .catch(error => alert(error));
+
+      setName('');
+      setEmail('');
+    }
+  }
 
   return (
     <section className={styles.container}>
@@ -102,17 +144,34 @@ export default function Team() {
         </picture>
         <div className={styles.contactFormContainer}>
           <p className={styles.contactFormTitle}>Request Callback</p>
-          <form className={styles.contactForm} action="">
+          <form className={styles.contactForm} onSubmit={handleSubmit}>
             <input
               className={styles.input}
               type="text"
               placeholder="Enter your name"
+              value={name}
+              onChange={handleChangeName}
+              onBlur={e =>
+                validator.nameValidator(e.target.value, setNameValid)
+              }
             />
             <input
               className={styles.inputSecond}
+              style={{ marginBottom: !emailValid ? '8px' : '40px' }}
               type="text"
               placeholder="Enter email*"
+              value={email}
+              onChange={handleChangeEmail}
+              onBlur={e =>
+                validator.emailValidator(e.target.value, setEmailValid)
+              }
             />
+            {!emailValid && (
+              <span className={styles.warning}>
+                <Worning />
+                This is a required field
+              </span>
+            )}
             <button className={styles.submitButton} type="submit">
               Send
             </button>

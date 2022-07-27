@@ -400,6 +400,17 @@
   }
 }
 
+.warning {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+  color: #eb5757;
+}
+
+.warning > svg {
+  margin-right: 5px;
+}
+
 .submitButton {
   padding: 10px 116px;
   width: 100%;

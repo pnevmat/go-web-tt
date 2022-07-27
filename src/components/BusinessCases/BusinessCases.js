@@ -179,7 +179,14 @@ export default function BusinessCases() {
                 </button>
               </div>
             )}
-            <span class={styles.close} onClick={() => closeModal()}>
+            <span
+              class={styles.close}
+              onClick={() => closeModal()}
+              onMouseOver={() => {
+                setPrevHover(false);
+                setNextHover(false);
+              }}
+            >
               &times;
             </span>
           </div>
