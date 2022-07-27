@@ -3,6 +3,10 @@ import contactJpg from '../../images/contact.jpg';
 import contactJpg2x from '../../images/contact@2x.jpg';
 import contactWebp from '../../images/contact.webp';
 import contactWebp2x from '../../images/contact@2x.webp';
+import Facebook from '../../images/icons/Facebook';
+import Twitter from '../../images/icons/Twitter';
+import Youtube from '../../images/icons/Youtube';
+import Linkedin from '../../images/icons/Linkedin';
 
 import styles from './Team.module.css';
 
@@ -63,6 +67,22 @@ export default function Team() {
                 alt={teammate.name}
               />
             </picture>
+            <div className={styles.hoverBlock}>
+              <ul className={styles.list}>
+                <li>
+                  <Facebook />
+                </li>
+                <li>
+                  <Twitter />
+                </li>
+                <li>
+                  <Youtube />
+                </li>
+                <li>
+                  <Linkedin />
+                </li>
+              </ul>
+            </div>
             <p className={styles.name}>{teammate.name}</p>
             <p className={styles.position}>{teammate.position}</p>
           </li>

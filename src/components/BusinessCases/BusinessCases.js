@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import blog from '../../images/blog.jpg';
+import loading from '../../images/loading.gif';
 
 import styles from './BusinessCases.module.css';
 
 export default function BusinessCases() {
+  const [currentImg, setCurrentImg] = useState('');
+  const [prevHover, setPrevHover] = useState(false);
+  const [nextHover, setNextHover] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+
   const cases = [
     {
       imgJpg: require('../../images/cases1.jpg'),
@@ -42,6 +48,39 @@ export default function BusinessCases() {
       imgWebp2x: require('../../images/cases4@2x.webp'),
     },
   ];
+
+  function openModal(img) {
+    setCurrentImg(img);
+    const timerId = setTimeout(() => {
+      setIsLoading(false);
+      clearTimeout(timerId);
+    }, 1500);
+  }
+
+  function closeModal() {
+    setCurrentImg('');
+    setIsLoading(true);
+  }
+
+  function plusSlides(n) {
+    setIsLoading(true);
+    cases.find((image, i) => {
+      if (image.imgJpg === currentImg.imgJpg) {
+        if (i + n < 0 || i + n > cases.length - 1) {
+          setIsLoading(false);
+          return image;
+        }
+
+        const timerId = setTimeout(() => {
+          setCurrentImg(cases[i + n]);
+          setIsLoading(false);
+          clearTimeout(timerId);
+        }, 1500);
+      }
+      return image.imgJpg === currentImg.imgJpg;
+    });
+  }
+
   return (
     <section className={styles.container} id="2">
       <p className={styles.whatWeDo}>This is what we do</p>
@@ -67,12 +106,85 @@ export default function BusinessCases() {
                   className={styles.casesImg}
                   src={item.imgJpg}
                   alt="Business case"
+                  onClick={() => openModal(item)}
                 />
               </picture>
             </li>
           );
         })}
       </ul>
+      {currentImg !== '' && (
+        <div className={styles.backdrop}>
+          <div className={styles.modal}>
+            <div class="mySlides">
+              {isLoading ? (
+                <div className={styles.loadingContainer}>
+                  <img
+                    className={styles.loadingImg}
+                    src={loading}
+                    alt="Business case"
+                  />
+                </div>
+              ) : (
+                <picture>
+                  <source
+                    srcset={`${currentImg.imgWebp} 1x, ${currentImg.imgWebp2x} 2x`}
+                    type="image/webp"
+                  />
+                  <source
+                    srcset={`${currentImg.imgJpg} 1x, ${currentImg.imgJpg2x} 2x`}
+                    type="image/jpeg"
+                  />
+                  <img
+                    className={styles.modalImg}
+                    src={currentImg.imgJpg}
+                    alt="Business case"
+                  />
+                </picture>
+              )}
+            </div>
+            {!isLoading && (
+              <div
+                className={styles.prevContainer}
+                onMouseOver={() => {
+                  setNextHover(false);
+                  setPrevHover(true);
+                }}
+              >
+                <button
+                  type="button"
+                  class={styles.prev}
+                  style={{ opacity: prevHover ? 1 : '' }}
+                  onClick={() => plusSlides(-1)}
+                >
+                  {'<'}
+                </button>
+              </div>
+            )}
+            {!isLoading && (
+              <div
+                className={styles.nextContainer}
+                onMouseOver={() => {
+                  setPrevHover(false);
+                  setNextHover(true);
+                }}
+              >
+                <button
+                  type="button"
+                  class={styles.next}
+                  style={{ opacity: nextHover ? 1 : '' }}
+                  onClick={() => plusSlides(1)}
+                >
+                  {'>'}
+                </button>
+              </div>
+            )}
+            <span class={styles.close} onClick={() => closeModal()}>
+              &times;
+            </span>
+          </div>
+        </div>
+      )}
       <div className={styles.blogContainer} id="3">
         <img className={styles.blogImg} src={blog} alt="Blog" />
         <div className={styles.blogTextContainer}>

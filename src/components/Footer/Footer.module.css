@@ -55,6 +55,11 @@
   fill: #fff;
 }
 
+.list > li:hover > svg {
+  fill: #28a745;
+  cursor: pointer;
+}
+
 .text {
   margin-bottom: 0;
   font-family: 'Open Sans';

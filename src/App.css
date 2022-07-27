@@ -33,3 +33,7 @@ ul {
   margin-bottom: 0;
   list-style: none;
 }
+
+picture {
+  display: block;
+}

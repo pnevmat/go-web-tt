@@ -3,7 +3,12 @@
     display: flex;
     justify-content: flex-end;
     width: 100vw;
-    background-image: url('../../images/people@2x.jpg');
+    background-image: image-set(
+      url('../../images/people.webp') 1x,
+      url('../../images/people@2x.webp') 2x,
+      url('../../images/people.jpg') 1x,
+      url('../../images/people@2x.jpg') 2x
+    );
   }
 }
 
@@ -162,6 +167,13 @@
   font-style: normal;
   font-weight: 400;
   text-decoration: none;
+}
+
+.link:hover {
+  border: 1px solid #28a745;
+  background-color: #fff;
+  color: #28a745;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 767px) {

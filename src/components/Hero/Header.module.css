@@ -36,12 +36,35 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 44px;
 }
 
 .companyNameContainer > svg {
   width: 39px;
   height: 31px;
   fill: #28a745;
+}
+
+.companyNameContainer:hover > svg {
+  width: 44px;
+  height: 36px;
+  fill: #4de16e;
+  cursor: pointer;
+}
+
+.companyNameContainer:hover > div > .green {
+  display: inline-block;
+  width: 115px;
+  height: 44px;
+  color: #4de16e;
+  cursor: pointer;
+}
+
+.companyNameContainer:hover > div > .white {
+  display: inline-block;
+  width: 104px;
+  height: 44px;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 767px) {
@@ -136,4 +159,8 @@
 .navList a {
   color: #ffffff;
   text-decoration: none;
+}
+
+.navList a:hover {
+  text-decoration: underline;
 }
