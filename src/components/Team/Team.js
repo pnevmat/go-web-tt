@@ -80,6 +80,7 @@ export default function Team() {
 
       setName('');
       setEmail('');
+      console.log('Form successfuly submited');
     }
   }
 
