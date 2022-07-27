@@ -63,13 +63,11 @@ export default function Team() {
   }
 
   function handleSubmit(e) {
-    console.log('form submition started');
     const { nameValidator, emailValidator } = validator;
     nameValidator(name, setNameValid);
     emailValidator(email, setEmailValid);
 
     if (nameValid && emailValid && email !== '') {
-      console.log('form submited');
       fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -80,7 +78,6 @@ export default function Team() {
 
       setName('');
       setEmail('');
-      console.log('Form successfuly submited');
     }
   }
 
@@ -97,11 +94,11 @@ export default function Team() {
           <li key={teammate.id}>
             <picture>
               <source
-                srcset={`${teammate.imgWebp} 1x, ${teammate.imgWebp2x} 2x`}
+                srcSet={`${teammate.imgWebp} 1x, ${teammate.imgWebp2x} 2x`}
                 type="image/webp"
               />
               <source
-                srcset={`${teammate.imgJpg} 1x, ${teammate.imgJpg2x} 2x`}
+                srcSet={`${teammate.imgJpg} 1x, ${teammate.imgJpg2x} 2x`}
                 type="image/jpeg"
               />
               <img
@@ -134,11 +131,11 @@ export default function Team() {
       <div className={styles.contactContainer} id="4">
         <picture>
           <source
-            srcset={`${contactWebp} 1x, ${contactWebp2x} 2x`}
+            srcSet={`${contactWebp} 1x, ${contactWebp2x} 2x`}
             type="image/webp"
           />
           <source
-            srcset={`${contactJpg} 1x, ${contactJpg2x} 2x`}
+            srcSet={`${contactJpg} 1x, ${contactJpg2x} 2x`}
             type="image/jpeg"
           />
           <img className={styles.contactImg} src={contactJpg} alt="Contact" />

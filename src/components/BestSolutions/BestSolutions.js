@@ -11,11 +11,11 @@ export default function BestSolutions() {
     <section className={styles.container} id="1">
       <picture>
         <source
-          srcset={`${peopleWebp} 1x, ${peopleWebp2x} 2x`}
+          srcSet={`${peopleWebp} 1x, ${peopleWebp2x} 2x`}
           type="image/webp"
         />
         <source
-          srcset={`${peopleJpg} 1x, ${peopleJpg2x} 2x`}
+          srcSet={`${peopleJpg} 1x, ${peopleJpg2x} 2x`}
           type="image/jpeg"
         />
         <img className={styles.peopleImg} src={peopleJpg} alt="people" />

@@ -95,11 +95,11 @@ export default function BusinessCases() {
             <li key={i}>
               <picture>
                 <source
-                  srcset={`${item.imgWebp} 1x, ${item.imgWebp2x} 2x`}
+                  srcSet={`${item.imgWebp} 1x, ${item.imgWebp2x} 2x`}
                   type="image/webp"
                 />
                 <source
-                  srcset={`${item.imgJpg} 1x, ${item.imgJpg2x} 2x`}
+                  srcSet={`${item.imgJpg} 1x, ${item.imgJpg2x} 2x`}
                   type="image/jpeg"
                 />
                 <img
@@ -128,11 +128,11 @@ export default function BusinessCases() {
               ) : (
                 <picture>
                   <source
-                    srcset={`${currentImg.imgWebp} 1x, ${currentImg.imgWebp2x} 2x`}
+                    srcSet={`${currentImg.imgWebp} 1x, ${currentImg.imgWebp2x} 2x`}
                     type="image/webp"
                   />
                   <source
-                    srcset={`${currentImg.imgJpg} 1x, ${currentImg.imgJpg2x} 2x`}
+                    srcSet={`${currentImg.imgJpg} 1x, ${currentImg.imgJpg2x} 2x`}
                     type="image/jpeg"
                   />
                   <img
